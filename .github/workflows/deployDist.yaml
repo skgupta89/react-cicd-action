@@ -9,9 +9,9 @@ jobs:
             #     echo "cloning repo.."
             #     echo "${{toJson(github)}}"
             #     git clone https://github.com/${{github.repository}}.git
-              uses: actions/checkout@latest
+              uses: actions/checkout@v20
             - name: Install Node 21
-              uses: actions/setup-node@latest
+              uses: actions/setup-node@v4
               with: 
                 node-version: 20
             - name: print node version
