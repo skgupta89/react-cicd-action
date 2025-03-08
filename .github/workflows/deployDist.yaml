@@ -1,7 +1,7 @@
-name: Greeting
+name: Deploye
 on: [push, workflow_dispatch]
 jobs:
-    greet:
+    delpoy:
         runs-on: ubunto-latest
         steps: 
             - name: Get Code
@@ -22,6 +22,7 @@ jobs:
               run: npm run test
     
     deploy:
+        needs: delpoy
         runs-on: ubunto-latest
         steps: 
             - name: Get Code
